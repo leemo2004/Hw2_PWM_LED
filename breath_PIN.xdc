@@ -1,0 +1,5 @@
+set_property IOSTANDARD LVCMOS25 [get_ports i_clk]
+set_property  PACKAGE_PIN Y9 [get_ports i_clk] 
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports i_clk]
+set_property -dict {PACKAGE_PIN F22 IOSTANDARD LVCMOS25 } [get_ports {i_rst}]
+set_property -dict {PACKAGE_PIN U14 IOSTANDARD LVCMOS25 } [get_ports {o_led}]
